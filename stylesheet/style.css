@@ -6,3 +6,8 @@
 @import "sidebar.css";
 @import "basic.css";
 @import "content.css";
+
+/*compact*/
+@import "menubar_compact.css";
+@import "sidebar_compact.css";
+@import "content_compact.css";
