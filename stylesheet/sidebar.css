@@ -12,7 +12,18 @@
 .sidebarMenu {
   width: calc(100% + 20px);
   height: 100%;
+  padding-top: 10px;
+  padding-bottom: 70px;
   overflow-y: scroll;
+}
+
+.sidebarMenuItem {
+  position: relative;
+  height: 50px;
+}
+
+.sidebarMenuItem:hover {
+  height: auto;
 }
 
 .sidebarMenuItem:hover .sidebarSubmenu {
@@ -45,10 +56,13 @@
   text-align: center;
 }
 
-.sidebarMenuItem:last-child {
+.sidebarModeMenu {
   position: absolute;
   bottom: 0;
   left: 0;
+  padding: 10px 0;
+  background: white;
+  z-index: 2;
 }
 
 .sidebarMenuItem.apple::before      { content: '\f179'; }
@@ -62,11 +76,6 @@
 .sidebarMenuItem.gitlab::before     { content: '\f296'; }
 .sidebarMenuItem.resistance::before { content: '\f1d0'; }
 .sidebarMenuItem.mode::before       { content: '\f053'; }
-
-.sidebarMenuItem {
-  position: relative;
-  height: 50px;
-}
 
 .sidebarSubmenu {
   display: none;
@@ -82,6 +91,6 @@
   background: lightgrey;
 }
 
-.sidebarSubmenuItem:first-child {
+.sidebarSubmenuHeader {
   display: none;
 }
