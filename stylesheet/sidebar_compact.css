@@ -12,6 +12,10 @@
   overflow-y: visible;
 }
 
+.compact .sidebarMenuItem {
+  width: 60px;
+}
+
 .compact .sidebarMenuItem:hover {
   background: lightgrey;
   height: 50px;
@@ -27,41 +31,40 @@
   width: 220px;
   /*max-height: 284px;*/
   /*padding-top: 60px;*/
-
   padding-bottom: 10px;
   box-shadow: 0 0 4px 0 rgba(0,0,0,0.15);
   background: white;
+}
+
+.compact .sidebarSubmenuWrapper {
   overflow: hidden;
+  position: relative;
 }
 
 .compact .sidebarSubmenu ul {
+  width: 240px;
+}
+
+.compact .sidebarSubmenu ul:not(.sidebarSubmenuHeader) {
   position: relative;
   max-height: 284px;
-  width: 240px;
   padding-top: 60px;
   overflow-y: scroll;
+}
+
+
+.compact .sidebarSubmenu ul.sidebarSubmenuHeader {
+  position: absolute;
+  width: 100%;
+  background: white;
+  padding-bottom: 10px;
+  z-index: 2;
 }
 
 .compact .sidebarSubmenuItem {
   position: relative;
   z-index: 1;
   padding: 10px;
-}
-
-.compact .sidebarSubmenuItem:first-child {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-bottom: 1px solid lightgrey;
-}
-
-.compact .sidebarSubmenuItem:first-child:hover {
-  background: white;
-}
-
-.compact .sidebarSubmenuItem:nth-child(2) {
-  margin-top: 10px;
 }
 
 .compact .sidebarSubmenu::before,
@@ -94,4 +97,15 @@
 
 .compact .sidebarSubmenuHeader {
   display: block;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.compact .sidebarSubmenuHeader li {
+  border-bottom: 1px solid lightgrey;
+}
+
+.compact .sidebarSubmenuHeader li:hover {
+  background: white;
 }
